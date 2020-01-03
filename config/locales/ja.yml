@@ -1,28 +1,24 @@
---2019-11-12 23:42:47--  https://raw.githubusercontent.com/svenfuchs/rails-i18n/master/rails/locale/ja.yml
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 5117 (5.0K) [text/plain]
-Saving to: ‘ja.yml’
-
-     0K ....                                                  100% 3.84M=0.001s
-
-2019-11-12 23:42:47 (3.84 MB/s) - ‘ja.yml’ saved [5117/5117]
-
 ja:
   activerecord:
-     errors:
-       message:
-         record_invalid: "バリデーションに失敗しました: %{errors}"
-         restrict_dependent_destroy:
-           has_one: "%{record}が存在しているので削除できません"
-           has_many: "%{record}が存在しているので削除できません"
-     models:
-       task: タスク
-     attributes:
-       task:
-         id: ID
-         name: 名称
-         description: 詳しい説明
-         creates_at: 登録日時
-         updated_at: 更新日時      
+    errors:
+      message:
+        record_invalid: "バリデーションに失敗しました: %{errors}"
+        restrict_dependent_destroy:
+          has_one: "%{record}が存在しているので削除できません"
+          has_many: "%{record}が存在しているので削除できません"
+    models:
+      task: タスク
+    attributes:
+      task:
+        id: ID
+        name: 名称
+        description: 詳しい説明
+        creates_at: 登録日時
+        updated_at: 更新日時
+  helper:
+    select:
+      prompt: 選択してください
+    submit:
+      create: 登録する
+      submit: 保存する
+      update: 更新する
